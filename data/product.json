@@ -1,0 +1,20 @@
+[
+    {
+      "id": 1,
+      "name": "Clavier mécanique",
+      "price": 89.99,
+      "category": "accessoires"
+    },
+    {
+      "id": 2,
+      "name": "Souris sans fil",
+      "price": 29.99,
+      "category": "accessoires"
+    },
+    {
+      "id": 3,
+      "name": "Écran 27 pouces",
+      "price": 229.99,
+      "category": "moniteurs"
+    }
+  ]
