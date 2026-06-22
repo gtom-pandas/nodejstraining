@@ -1,0 +1,6 @@
+{
+    "id": 1,
+    "supplierId": 1,
+    "requiredTypes": ["certificate", "insurance"],
+    "status": "missing-documents"
+  }

@@ -1,0 +1,8 @@
+{
+    "id": 1,
+    "supplierId": 1,
+    "type": "certificate",
+    "name": "IFS Certificate 2026",
+    "status": "valid",
+    "expiresAt": "2026-12-31"
+  }
