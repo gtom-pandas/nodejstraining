@@ -40,7 +40,19 @@ const server = http.createServer(async (req, res) => {
     if (method === 'GET' && pathname === '/documents') {
       const documents = await readJson(DOCUMENTS_FILE);
       const supplierId = url.searchParams.get('supplierId');
-    
+    if (method === 'GET' && pathname === '/dashboard') {
+      const suppliers = await readJson(SUPPLIERS_FILE);
+      const documents = await readJson(DOCUMENTS_FILE);
+
+      return sendJson(res, 200, {
+        totalSuppliers : suppliers.length,
+        totalDocuments : documents.length,
+        expiredDocuments: documents.filter((doc) => doc.status === 'expired').length,
+        validDocuments: documents.filter((doc) => doc.status === 'valid').length,
+
+      });
+    }
+  
       if (supplierId) {
         const filteredDocuments = documents.filter(
           (doc) => doc.supplierId === Number(supplierId)
